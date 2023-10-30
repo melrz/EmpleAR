@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+}
+
+body {
+    background-color: #4444aa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    /* Cambia el tamaño del logo según tus preferencias */
+    margin-left: 60px;
+    /* Ajusta el margen derecho para separar el logo del título */
+}
+
+
+.container-bar {
+    height: 70px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-bar h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    flex: none;
+    color: white;
+}
+
+.icono-busqueda {
+    color: gray;
+}
+
+nav {
+    width: 100%;
+    background-color: #3b387a;
+    top: 0;
+    z-index: 10;
+    position: relative;
+}
+
+nav .container-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar,
+.nav {
+    background-color: rgb(234, 234, 234);
+    border-radius: 32px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="search"] {
+    background: transparent;
+    width: 30vw;
+    margin-left: 20px;
+    font-size: 14px;
+    color: gray;
+    border: none;
+    outline: none;
+}
+
+nav .button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 6px;
+    font-weight: bold;
+    border-radius: 32px;
+    cursor: pointer;
+    color: white;
+    background-color: #5956BA;
+    transition: all 300ms ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.container-registro {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin: 20px auto;
+    flex-grow: 1;
+}
+
+.container-registro .titulo {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container-registro .titulo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+    background: linear-gradient(135deg, #71b7e6, #5956BA);
+}
+
+::placeholder {
+    color: gray
+}
+
+/* Estilos para el formulario y sus elementos */
+.container-registro form .detalles-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .detalles-usuario .caja-relleno {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.detalles-usuario .caja-relleno .detalles {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+form .detalles-usuario .caja-relleno input {
+    color: gray;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+form .detalles-usuario .caja-relleno input:focus,
+form .detalles-usuario .caja-relleno input:valid {
+    border-color: #9b59b6;
+}
+
+.select-wrapper {
+    margin-bottom: 15px;
+}
+
+select {
+    color: gray;
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+
+.button input[type="submit"] {
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    background: #3b387a;
+    height: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.button input[type="submit"]:hover {
+    background: #5956BA;
+}
+
+.footer {
+    position: relative;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #3b387a;
+    padding: 35px 0;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.footer-links {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #5956BA;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #bbbbbb;
+    display: block;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: white;
+    padding-left: 6px;
+}
+
+.social-links a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all .5s ease;
+}
+
+.social-links a:hover {
+    background-color: #5956BA;
+}

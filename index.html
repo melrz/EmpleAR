@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpleAR</title>
+
+    <link rel="stylesheet" href="css/index_style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+</head>
+
+<body>
+
+    <nav>
+        <div class="container-bar">
+            <div class="logo-title">
+                <img src="img/logo.svg" alt="Logo EmpleAR" class="logo">
+                <h2>Emplear</h2>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search icono-busqueda"></i>
+                <input type="search" placeholder="Buscar">
+            </div>
+            <div class="button">
+                <a href="login.html" target="_blank" class="btn">Iniciar sesión</a>
+                <a href="registro.html" target="_blank" class="btn">Registrarse</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <section class="motiv">
+        <p>"Explorá un mundo de oportunidades flexibles. En EmpleAR, conectamos tu talento con trabajos casuales que se ajustan a tu estilo de vida."</p>
+    </section>
+
+    <section class="boxes">
+        <!-- Producto 1 -->
+        <div class="producto">
+            <img src="img/plomero.jpg" alt="Plomero">
+            <div class="description">
+                <h2>Plomero</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, ab.</p>
+            </div>
+            <div class="flecha-izquierda" onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </div>
+            <div class="flecha-derecha" onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')">
+                <i class="material-icons">keyboard_arrow_right</i>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="producto">
+            <img src="img/unas.jpg" alt="Manicurista">
+            <div class="description">
+                <h2>Manicurista</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, amet?</p>
+            </div>
+            <div class="flecha-izquierda" onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </div>
+            <div class="flecha-derecha" onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')">
+                <i class="material-icons">keyboard_arrow_right</i>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="producto">
+            <img src="img/gasista.jpg" alt="Gasista">
+            <div class="description">
+                <h2>Gasista</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, amet?</p>
+            </div>
+            <!-- Flechas superpuestas en la imagen -->
+            <div class="flecha-izquierda" onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </div>
+            <div class="flecha-derecha" onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')">
+                <i class="material-icons">keyboard_arrow_right</i>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="producto">
+            <img src="img/albanil.jpg" alt="Manicurista">
+            <div class="description">
+                <h2>Albañil</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, amet?</p>
+            </div>
+            <!-- Flechas superpuestas en la imagen -->
+            <div class="flecha-izquierda" onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </div>
+            <div class="flecha-derecha" onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')">
+                <i class="material-icons">keyboard_arrow_right</i>
+            </div>
+        </div>
+
+         <!-- Producto 5 -->
+         <div class="producto">
+            <img src="img/paseador.jpeg" alt="Manicurista">
+            <div class="description">
+                <h2>Paseadora de perros</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, amet?</p>
+            </div>
+            <!-- Flechas superpuestas en la imagen -->
+            <div class="flecha-izquierda" onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </div>
+            <div class="flecha-derecha" onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')">
+                <i class="material-icons">keyboard_arrow_right</i>
+            </div>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="producto">
+            <img src="img/herrero.jpg" alt="Herrero">
+            <div class="description">
+                <h2>Herrero</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, amet?</p>
+            </div>
+            <!-- Flechas superpuestas en la imagen -->
+            <div class="flecha-izquierda" onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </div>
+            <div class="flecha-derecha" onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')">
+                <i class="material-icons">keyboard_arrow_right</i>
+            </div>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="producto">
+            <img src="img/peluquera.jpg" alt="Peluquera">
+            <div class="description">
+                <h2>Peluquera</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, amet?</p>
+            </div>
+            <div class="flecha-izquierda" onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </div>
+            <div class="flecha-derecha" onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')">
+                <i class="material-icons">keyboard_arrow_right</i>
+            </div>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="producto">
+            <img src="img/pintora.jpg" alt="Pintora">
+            <div class="description">
+                <h2>Pintora</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, amet?</p>
+            </div>
+            <div class="flecha-izquierda" onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </div>
+            <div class="flecha-derecha" onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')">
+                <i class="material-icons">keyboard_arrow_right</i>
+            </div>
+        </div>
+        
+
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4> Compañia </h4>
+                    <ul>
+                        <li><a href="sobre_nosotros.html" target="_blank">Sobre Nosotros</a></li>
+                        <li><a href="#">Nuestros Servicios</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4> Empleos </h4>
+                    <ul>
+                        <li><a href="#">Buscar Empleos</a></li>
+                        <li><a href="#">Publicar Empleos</a></li>
+                        <li><a href="#">Cómo Funciona</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4> Recursos </h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guías de Carrera</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4> Seguinos </h4>
+                    <div class="social-links">
+                        <a href="https://trello.com/c/jDKyPnug/16-pagina-de-sobre-nosotros"><i class="fab fa-facebook-f"></i></a>
+                        <a href="www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Función para cambiar la imagen de un producto
+        function cambiarImagen(productoId, nuevaImagen) {
+            var producto = document.getElementById(productoId);
+            var imagen = producto.querySelector('img');
+            imagen.src = nuevaImagen;
+        }
+    </script>
+
+</body>
+
+</html>
