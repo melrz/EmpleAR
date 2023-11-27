@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmpleAR</title>
 
-    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="index_style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
@@ -32,25 +32,48 @@
     </nav>
     
 
-    <section class="motiv">
-        <p>"Explorá un mundo de oportunidades flexibles. En EmpleAR, conectamos tu talento con trabajos casuales que se ajustan a tu estilo de vida."</p>
-    </section>
-
-    <section class="boxes">
-        <!-- Producto 1 -->
-        <div class="producto">
-            <img src="img/plomero.jpg" alt="Plomero">
-            <div class="description">
-                <h2>Plomero</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, ab.</p>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="imagen1.jpg" alt="Imagen 1">
             </div>
-            <div class="flecha-izquierda" onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')">
-                <i class="material-icons">keyboard_arrow_left</i>
+            <div class="slide">
+                <img src="imagen2.jpg" alt="Imagen 2">
             </div>
-            <div class="flecha-derecha" onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')">
-                <i class="material-icons">keyboard_arrow_right</i>
+            <div class="slide">
+                <img src="imagen3.jpg" alt="Imagen 3">
+            </div>
+            <div class="slide">
+                <img src="imagen4.jpg" alt="Imagen 4">
             </div>
         </div>
+        <button class="arrow arrow-left" onclick="cambiarSlide(-1)">
+            <i class="material-icons">keyboard_arrow_left</i>
+        </button>
+        <button class="arrow arrow-right" onclick="cambiarSlide(1)">
+            <i class="material-icons">keyboard_arrow_right</i>
+        </button>
+    </div>
+
+    <section class="boxes" id="productos">
+        <!-- Producto 1 -->
+<div class="producto" id="producto1">
+    <div class="slides-producto">
+        <div class="slide-producto">
+            <img src="img/plomero.jpg" alt="Plomero">
+        </div>
+    </div>
+    <div class="description">
+        <h2>Plomero</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, ab.</p>
+    </div>
+    <div class="flecha-izquierda" onclick="cambiarImagen('producto1', -1)">
+        <i class="material-icons">keyboard_arrow_left</i>
+    </div>
+    <div class="flecha-derecha" onclick="cambiarImagen('producto1', 1)">
+        <i class="material-icons">keyboard_arrow_right</i>
+    </div>
+</div>
 
         <!-- Producto 2 -->
         <div class="producto">
@@ -198,10 +221,9 @@
                 <div class="footer-links">
                     <h4> Seguinos </h4>
                     <div class="social-links">
-                        <a href="https://trello.com/c/jDKyPnug/16-pagina-de-sobre-nosotros"><i class="fab fa-facebook-f"></i></a>
-                        <a href="www.instagram.com"><i class="fab fa-instagram"></i></a>
-                        <a href="www.twitter.com"><i class="fab fa-twitter"></i></a>
-                        <a href="www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -209,13 +231,52 @@
     </footer>
 
     <script>
-        // Función para cambiar la imagen de un producto
-        function cambiarImagen(productoId, nuevaImagen) {
-            var producto = document.getElementById(productoId);
-            var imagen = producto.querySelector('img');
-            imagen.src = nuevaImagen;
+        var slideIndex = 0;
+
+        function cambiarSlide(n) {
+            mostrarSlides(slideIndex += n);
         }
+
+        function mostrarSlides(n) {
+            var slides = document.querySelectorAll('.slide');
+
+            if (n >= slides.length) {
+                slideIndex = 0;
+            }
+
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+
+            document.querySelector('.slides').style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+        }
+
+        setInterval(function () {
+            cambiarSlide(1);
+        }, 5000);
+
+        function filtrarProductos() {
+            var termino = document.querySelector('.search-bar input[type="search"]').value.toLowerCase();
+            var productos = document.querySelectorAll('.producto');
+
+            productos.forEach(function (producto) {
+                var nombre = producto.querySelector('h2').innerText.toLowerCase();
+                var descripcion = producto.querySelector('p').innerText.toLowerCase();
+
+                if (nombre.includes(termino) || descripcion.includes(termino)) {
+                    producto.style.display = 'block';
+                } else {
+                    producto.style.display = 'none';
+                }
+            });
+        }
+
+        // Agrega un evento de escucha para el input de búsqueda
+        document.querySelector('.search-bar input[type="search"]').addEventListener('input', filtrarProductos);
+
+        
     </script>
+
 
 </body>
 
