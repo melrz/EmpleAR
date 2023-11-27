@@ -55,10 +55,36 @@
         </button>
     </div>
 
+    <h1 id="subtitulo">Servicios</h1>
+
+    <aside>
+       <!-- Agrega las zonas al filtro -->
+    <h2 class="filtrar-categoria">Filtrar por Categoría</h2>
+    <ul id="filtroCategorias">
+    <!-- Categorías  -->
+    <li onclick="filtrarPorCategoria('plomero')">Plomero</li>
+    <li onclick="filtrarPorCategoria('manicurista')">Manicurista</li>
+    <li onclick="filtrarPorCategoria('gasista')">Gasista</li>
+    <li onclick="filtrarPorCategoria('albanil')">Albañil</li>
+    <li onclick="filtrarPorCategoria('paseadora')">Paseador de perros</li>
+    <li onclick="filtrarPorCategoria('herrero')">Herrero</li>
+    <li onclick="filtrarPorCategoria('peluquera')">Peluquera</li>
+    <li onclick="filtrarPorCategoria('pintora')">Pintora</li>
+    
+    <!-- Zonas -->
+    <h2 class="filtrar-categoria">Filtrar por Zona</h2>
+    <li onclick="filtrarPorZona('caba')">CABA</li>
+    <li onclick="filtrarPorZona('zona-norte')">Zona Norte</li>
+    <li onclick="filtrarPorZona('zona-oeste')">Zona Oeste</li>
+    <li onclick="filtrarPorZona('zona-sur')">Zona Sur</li>
+</ul>
+<button id="bton-categoria" onclick="limpiarFiltro()">Limpiar Filtro</button>
+    </aside>
+
     <section class="boxes" id="productos">
         <!-- Producto 1 -->
-<div class="producto" id="producto1">
-    <div class="slides-producto">
+        <div class="producto" id="producto1" data-categoria="plomero">
+            <div class="slides-producto">
         <div class="slide-producto">
             <img src="img/plomero.jpg" alt="Plomero">
         </div>
@@ -76,7 +102,7 @@
 </div>
 
         <!-- Producto 2 -->
-        <div class="producto">
+        <div class="producto" id="producto2" data-categoria="manicurista">
             <img src="img/unas.jpg" alt="Manicurista">
             <div class="description">
                 <h2>Manicurista</h2>
@@ -91,7 +117,7 @@
         </div>
 
         <!-- Producto 3 -->
-        <div class="producto">
+        <div class="producto" id="producto3" data-categoria="gasista">
             <img src="img/gasista.jpg" alt="Gasista">
             <div class="description">
                 <h2>Gasista</h2>
@@ -107,8 +133,8 @@
         </div>
 
         <!-- Producto 4 -->
-        <div class="producto">
-            <img src="img/albanil.jpg" alt="Manicurista">
+        <div class="producto" id="producto4" data-categoria="albanil">
+            <img src="img/albanil.jpg" alt="Albañil">
             <div class="description">
                 <h2>Albañil</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, amet?</p>
@@ -123,8 +149,8 @@
         </div>
 
          <!-- Producto 5 -->
-         <div class="producto">
-            <img src="img/paseador.jpeg" alt="Manicurista">
+         <div class="producto" id="producto5" data-categoria="Paseadora">
+            <img src="img/paseador.jpeg" alt="Paseadora">
             <div class="description">
                 <h2>Paseadora de perros</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, amet?</p>
@@ -139,7 +165,7 @@
         </div>
 
         <!-- Producto 6 -->
-        <div class="producto">
+        <div class="producto" id="producto6" data-categoria="herrero">
             <img src="img/herrero.jpg" alt="Herrero">
             <div class="description">
                 <h2>Herrero</h2>
@@ -155,7 +181,7 @@
         </div>
 
         <!-- Producto 7 -->
-        <div class="producto">
+        <div class="producto" id="producto7" data-categoria="Peluquera">
             <img src="img/peluquera.jpg" alt="Peluquera">
             <div class="description">
                 <h2>Peluquera</h2>
@@ -170,7 +196,7 @@
         </div>
 
         <!-- Producto 8 -->
-        <div class="producto">
+        <div class="producto" id="producto8" data-categoria="pintora">
             <img src="img/pintora.jpg" alt="Pintora">
             <div class="description">
                 <h2>Pintora</h2>
@@ -273,6 +299,57 @@
 
         // Agrega un evento de escucha para el input de búsqueda
         document.querySelector('.search-bar input[type="search"]').addEventListener('input', filtrarProductos);
+
+        // Función para filtrar productos por categoría
+        function filtrarPorCategoria(categoria) {
+            var productos = document.querySelectorAll('.producto');
+
+            productos.forEach(function (producto) {
+                var categoriaProducto = producto.getAttribute('data-categoria');
+
+                if (categoria === 'todos' || categoria === categoriaProducto) {
+                    producto.style.display = 'block';
+                } else {
+                    producto.style.display = 'none';
+                }
+            });
+        }
+
+        // Función para limpiar el filtro y mostrar todos los productos
+        function limpiarFiltro() {
+            var productos = document.querySelectorAll('.producto');
+
+            productos.forEach(function (producto) {
+                producto.style.display = 'block';
+            });
+        }
+
+        // Función para filtrar productos por zona
+function filtrarPorZona(zona) {
+    var productos = document.querySelectorAll('.producto');
+
+    productos.forEach(function (producto) {
+        var zonaProducto = producto.getAttribute('data-zona');
+
+        if (zona === 'todos' || zona === zonaProducto) {
+            producto.style.display = 'block';
+        } else {
+            producto.style.display = 'none';
+        }
+    });
+}
+
+// Agrega la zona a cada producto en el HTML
+document.getElementById('producto1').setAttribute('data-zona', 'caba');
+document.getElementById('producto2').setAttribute('data-zona', 'zona-norte');
+document.getElementById('producto3').setAttribute('data-zona', 'zona-oeste');
+document.getElementById('producto4').setAttribute('data-zona', 'zona-sur');
+document.getElementById('producto5').setAttribute('data-zona', 'caba');
+document.getElementById('producto6').setAttribute('data-zona', 'zona-norte');
+document.getElementById('producto7').setAttribute('data-zona', 'zona-oeste');
+document.getElementById('producto8').setAttribute('data-zona', 'zona-sur');
+
+
 
         
     </script>
