@@ -101,6 +101,8 @@ body {
             opacity: 0.8;
         }
 
+
+
         
         .slider {
             position: relative;
@@ -157,8 +159,55 @@ body {
             border-radius: 15px;
         }
 
+        h1 {
+            margin-left: 700px;
+            color: black;
+            
+        }
+
+
+        /* Estilos para el aside */
+aside {
+    margin-top: 19px;
+    margin-left: 6px;
+    color: rgb(1, 1, 10);
+    background-color: rgba(255, 255, 255, 0.43);
+    border-radius: 5px;
+    float: left; /* Hace que el aside flote a la izquierda */
+    width: 200px; /* Ajusta el ancho del aside según tus necesidades */
+    padding: 20px; /* Añade relleno para mayor legibilidad */
+    box-sizing: border-box; /* Incluye el relleno en el ancho total */
+}
+
+/* Estilos para la lista de categorías y zonas */
+#filtroCategorias {
+    list-style: none;
+    padding: 0;
+}
+
+#filtroCategorias li {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#bton-categoria {
+    border-radius: 4px;
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+/* Estilos adicionales para las zonas */
+#filtroCategorias h2 {
+    margin-top: 20px; /* Espacio adicional entre categoría y zona */
+    font-size: 1.2em; /* Ajusta el tamaño del título de categoría/zona */
+}
+
+
+
+
         .boxes {
-            cursor: pointer;
             color: rgb(0, 0, 0);
             display: flex;
             flex-wrap: wrap;
@@ -171,8 +220,7 @@ body {
 
 
         .producto {
-            /* Elimina la primera instancia para evitar conflictos */
-            /* width: 500px; */
+            width: 500px;
             height: 400px;
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.43);
