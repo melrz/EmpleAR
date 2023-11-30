@@ -8,13 +8,13 @@
 }
 
 body {
-    background-color: #4444aa;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(202, 202, 219);
+    color: white;
 }
 
 .logo-title {
+    cursor: pointer;
     display: flex;
     align-items: center;
 }
@@ -25,6 +25,7 @@ body {
     margin-left: 60px;
     /* Ajusta el margen derecho para separar el logo del título */
 }
+
 
 
 .container-bar {
@@ -39,8 +40,9 @@ body {
 .container-bar h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     flex: none;
-    color: white;
 }
+
+
 
 .icono-busqueda {
     color: gray;
@@ -55,13 +57,16 @@ nav {
 }
 
 nav .container-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: 0;
+    max-width: 1200px;
+    /* Ajusta el ancho máximo según tu diseño */
+    width: 100%;
+    padding: 0 20px;
+    /* Añade relleno a los lados del contenedor */
+    box-sizing: border-box;
 }
 
-.search-bar,
-.nav {
+.search-bar {
     background-color: rgb(234, 234, 234);
     border-radius: 32px;
     padding: 15px 20px;
@@ -101,7 +106,9 @@ nav .button {
     opacity: 0.8;
 }
 
+
 .container-registro {
+    color: rgb(36, 36, 36);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     max-width: 700px;
     width: 100%;
