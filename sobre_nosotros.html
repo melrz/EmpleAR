@@ -13,20 +13,20 @@
 <body>
   <nav>
     <div class="container-bar">
-      <div class="logo-title">
-        <img src="img/logo.svg" alt="Logo EmpleAR" class="logo">
-        <h2>Emplear</h2>
-      </div>
-      <div class="search-bar">
-        <i class="fas fa-search icono-busqueda"></i>
-        <input type="search" placeholder="Buscar">
-      </div>
-      <div class="button">
-        <a href="login.html" class="btn">Iniciar sesión</a>
-        <a href="registro.html" class="btn">Registrarse</a>
-      </div>
+        <div class="logo-title">
+            <img src="img/logo.svg" alt="Logo EmpleAR" class="logo">
+            <h2>EmpleAR</h2>
+        </div>
+        <div class="search-bar">
+            <i class="fas fa-search icono-busqueda"></i>
+            <input type="search" placeholder="Buscar">
+        </div>
+        <div class="button">
+            <a href="login.html" class="btn">Iniciar sesión</a>
+            <a href="registro.html" class="btn">Registrarse</a>
+        </div>
     </div>
-  </nav>
+</nav>
 
 
   <main id="cajas">
@@ -38,9 +38,9 @@
             ¿Qué queremos lograr?
           </p>
           <p class="text-blk subHeadingText">
-            Una oportunidad para demostrar las capacidades laborales de la comunidad
+            Una oportunidad para demostrar las capacidades laborales de la comunidad.
             El objetivo es mostrar los servicios de las personas y que todos puedan tener la oportunidad de conseguir
-            trabajo gracias a sus habilidades y conocimientos en el rubro.
+            trabajo gracias a sus habilidades y conocimientos en los rubros donde se destaquen.
           </p>
           <button class="explore">
             Explorar servicios
@@ -51,11 +51,6 @@
     </div>
     </div>
   </main>
-
-
-
-
-
 
 
 
@@ -104,6 +99,15 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document
+        .querySelector(".logo-title h2")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+  </script>
+
 </body>
 
 </html>
