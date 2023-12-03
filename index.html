@@ -6,12 +6,8 @@
     <title>EmpleAR</title>
 
     <link rel="stylesheet" href="css/index_style.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"/>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   </head>
 
   <body>
@@ -39,13 +35,10 @@
           <img src="img/emplear.png" alt="Presentación" />
         </div>
         <div class="slide">
-          <img src="img/destacados.png" alt="Destacados" />
+          <img src="img/gratis.png" alt="Plantilla" />
         </div>
         <div class="slide">
-          <img src="img/plantilla.png" alt="Plantilla" />
-        </div>
-        <div class="slide">
-          <img src="img/plantilla.png" alt="Plantilla" />
+          <img src="img/belleza.png" alt="Destacados en belleza" />
         </div>
       </div>
       <button class="arrow arrow-left" onclick="cambiarSlide(-1)">
@@ -57,228 +50,201 @@
     </div>
 
     <aside>
-      <!-- Agrega las zonas al filtro -->
+      <!-- Filtrar por Categoría -->
       <h2 class="filtrar-categoria">Filtrar por Categoría</h2>
       <ul id="filtroCategorias">
-        <!-- Categorías  -->
-        <li onclick="filtrarPorCategoria('plomero')">Plomero</li>
-        <li onclick="filtrarPorCategoria('manicurista')">Manicurista</li>
-        <li onclick="filtrarPorCategoria('gasista')">Gasista</li>
-        <li onclick="filtrarPorCategoria('albanil')">Albañil</li>
-        <li onclick="filtrarPorCategoria('paseadora')">Paseador de perros</li>
-        <li onclick="filtrarPorCategoria('herrero')">Herrero</li>
-        <li onclick="filtrarPorCategoria('peluquera')">Peluquera</li>
-        <li onclick="filtrarPorCategoria('pintora')">Pintora</li>
-
-        <!-- Zonas -->
-        <h2 class="filtrar-categoria">Filtrar por Zona</h2>
+        <li onclick="filtrarPorCategoria('belleza')">Belleza</li>
+        <li onclick="filtrarPorCategoria('cuidado-mascotas')">Cuidado de mascotas</li>
+        <li onclick="filtrarPorCategoria('vehiculos')">Mant. Vehículo</li>
+        <li onclick="filtrarPorCategoria('reformas')">Reformas y Reparaciones</li>
+        <li onclick="filtrarPorCategoria('reposteria')">Repostería</li>
+        <li onclick="filtrarPorCategoria('tecnologia')">Tecnología</li>
+      
+      </ul>
+    
+      <!-- Filtrar por Zona -->
+      <h2 class="filtrar-categoria">Filtrar por Zona</h2>
+      <ul id="filtroZonas">
         <li onclick="filtrarPorZona('caba')">CABA</li>
         <li onclick="filtrarPorZona('zona-norte')">Zona Norte</li>
         <li onclick="filtrarPorZona('zona-oeste')">Zona Oeste</li>
         <li onclick="filtrarPorZona('zona-sur')">Zona Sur</li>
       </ul>
-      <button id="bton-categoria" onclick="limpiarFiltro()">
-        Limpiar Filtro
-      </button>
+    
+      <!-- Botón para limpiar filtro -->
+      <button id="bton-categoria" onclick="limpiarFiltro()">Limpiar Filtro</button>
     </aside>
 
-    <section class="boxes" id="productos">
+    <section class="boxes">
       <!-- Producto 1 -->
-      <div class="producto" id="producto1" data-categoria="plomero">
-        <div class="slides-producto">
-          <div class="slide-producto">
-            <img src="img/plomero.jpg" alt="Plomero" />
-          </div>
-        </div>
+      <div class="producto" id="producto1" data-categoria="reformas" data-zona="caba">
+        <img src="img/plomero.jpg" alt="Plomero" />
+        <h2>Plomero</h2>
         <div class="description">
-          <h2>Plomero</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati,
-            ab.
+          <p> Profesional especializado en instalación y reparación de sistemas de cañerías y desagües domiciliarios.
+          <br><br>
+          Horario: Lunes a Viernes (9 AM - 6 PM) <br>
+          Zona: CABA
           </p>
-        </div>
-        <div class="flecha-izquierda" onclick="cambiarImagen('producto1', -1)">
-          <i class="material-icons">keyboard_arrow_left</i>
-        </div>
-        <div class="flecha-derecha" onclick="cambiarImagen('producto1', 1)">
-          <i class="material-icons">keyboard_arrow_right</i>
         </div>
       </div>
 
+
       <!-- Producto 2 -->
-      <div
-        class="producto"
-        id="producto2"
-        data-categoria="manicurista"
-        data-zona="zona-norte"
-      >
-        <div class="slides-producto">
-          <div class="slide-producto">
-            <img src="img/unas.jpg" alt="Manicurista" />
-          </div>
-        </div>
+      <div class="producto" id="producto2" data-categoria="reformas" data-zona="zona-oeste">
+        <img src="img/gasista.jpg" alt="Gasista"/>
+        <h2>Gasista</h2>
         <div class="description">
-          <h2>Manicurista</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt,
-            amet?
+          <p> Profesional especializado en instalación y reparación de sistemas de cañerías y desagües domiciliarios.
+          <br><br>
+          Horario: Lunes a Miércoles (9 AM - 14 PM) <br>
+          Zona: Oeste
           </p>
-        </div>
-        <div class="flecha-izquierda" onclick="cambiarImagen('producto2', -1)">
-          <i class="material-icons">keyboard_arrow_left</i>
-        </div>
-        <div class="flecha-derecha" onclick="cambiarImagen('producto2', 1)">
-          <i class="material-icons">keyboard_arrow_right</i>
         </div>
       </div>
 
       <!-- Producto 3 -->
-      <div class="producto" id="producto3" data-categoria="gasista">
-        <img src="img/gasista.jpg" alt="Gasista" />
+      <div class="producto" id="producto3" data-categoria="belleza" data-zona="zona-norte">
+        <img src="img/unas.png" alt="Manicurista"/>
+        <h2>Manicurista</h2>
         <div class="description">
-          <h2>Gasista</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt,
-            amet?
+          <p> Somos de zona norte trabajamos con turno
+          <br><br>
+          Horario: Lunes a viernes (15 PM - 18 PM) <br>
+          Zona: Norte
           </p>
-        </div>
-        <!-- Flechas superpuestas en la imagen -->
-        <div
-          class="flecha-izquierda"
-          onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_left</i>
-        </div>
-        <div
-          class="flecha-derecha"
-          onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_right</i>
         </div>
       </div>
 
-      <!-- Producto 4 -->
-      <div class="producto" id="producto4" data-categoria="albanil">
-        <img src="img/albanil.jpg" alt="Albañil" />
-        <div class="description">
-          <h2>Albañil</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt,
-            amet?
-          </p>
-        </div>
-        <!-- Flechas superpuestas en la imagen -->
-        <div
-          class="flecha-izquierda"
-          onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_left</i>
-        </div>
-        <div
-          class="flecha-derecha"
-          onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_right</i>
-        </div>
+     <!-- Producto 4 -->
+     <div class="producto" id="producto4" data-categoria="belleza" data-zona="zona-sur">
+      <img src="img/peluquera.jpg" alt="Peluquera"/>
+      <h2>Peluquera</h2>
+      <div class="description">
+        <p> Realizo ALISADOS, MECHAS, KERATINA, COLOR, BOTOX, NUTRICIONES, COLORES FANTASIA.
+        <br><br>
+        Zona: Sur
+        </p>
       </div>
+    </div>
 
-      <!-- Producto 5 -->
-      <div class="producto" id="producto5" data-categoria="paseadora">
-        <img src="img/paseador.jpeg" alt="Paseadora" />
-        <div class="description">
-          <h2>Paseadora de perros</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt,
-            amet?
-          </p>
-        </div>
-        <!-- Flechas superpuestas en la imagen -->
-        <div
-          class="flecha-izquierda"
-          onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_left</i>
-        </div>
-        <div
-          class="flecha-derecha"
-          onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_right</i>
-        </div>
+    <!-- Producto 5 -->
+    <div class="producto" id="producto5" data-categoria="tecnologia" data-zona="zona-sur">
+      <img src="img/marcas.png" alt="Servicio multimarcas"/>
+      <h2>Servicio Tecnico Reparacion De Tv Led Smart Tv 3d Multimarca
+      </h2>
+      <div class="description">
+        <p> SERVICIO TECNICO DE TV MULTIMARCA
+         SAMSUNG - LG - RCA - NOBLEX - HITACHI - PHILLIPS - TCL
+   
+        <br><br>
+        Zona: Sur
+        </p>
       </div>
+    </div>
 
-      <!-- Producto 6 -->
-      <div class="producto" id="producto6" data-categoria="herrero">
-        <img src="img/herrero.jpg" alt="Herrero" />
-        <div class="description">
-          <h2>Herrero</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt,
-            amet?
-          </p>
-        </div>
-        <!-- Flechas superpuestas en la imagen -->
-        <div
-          class="flecha-izquierda"
-          onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_left</i>
-        </div>
-        <div
-          class="flecha-derecha"
-          onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_right</i>
-        </div>
+    <!-- Producto 6 -->
+    <div class="producto" id="producto6" data-categoria="reformas" data-zona="caba">
+      <img src="img/instalacionaire.jpg" alt="instalacionaire" />
+      <h2>Instalación aire acondicionado</h2>
+      <div class="description">
+        <p> Profesional especializado en instalación y reparación de sistemas de cañerías y desagües domiciliarios.
+        <br><br>
+        Horario: Lunes a Viernes (9 AM - 6 PM) <br>
+        Zona: CABA
+        </p>
       </div>
+    </div>
 
-      <!-- Producto 7 -->
-      <div class="producto" id="producto7" data-categoria="peluquera">
-        <img src="img/peluquera.jpg" alt="Peluquera" />
-        <div class="description">
-          <h2>Peluquera</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt,
-            amet?
-          </p>
-        </div>
-        <div
-          class="flecha-izquierda"
-          onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_left</i>
-        </div>
-        <div
-          class="flecha-derecha"
-          onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_right</i>
-        </div>
+    <!-- Producto 7 -->
+    <div class="producto" id="producto7" data-categoria="reposteria" data-zona="caba">
+      <img src="img/pastelera.jpg" alt="Pastelera" />
+      <h2>Pastelera</h2>
+      <div class="description">
+        <p> Tortas a elección y también por encargue.
+        <br><br>
+        Zona: CABA
+        </p>
       </div>
+    </div>
 
-      <!-- Producto 8 -->
-      <div class="producto" id="producto8" data-categoria="pintora">
-        <img src="img/pintora.jpg" alt="Pintora" />
-        <div class="description">
-          <h2>Pintora</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt,
-            amet?
-          </p>
-        </div>
-        <div
-          class="flecha-izquierda"
-          onclick="cambiarImagen('producto1', 'otra_imagen_izquierda.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_left</i>
-        </div>
-        <div
-          class="flecha-derecha"
-          onclick="cambiarImagen('producto1', 'otra_imagen_derecha.jpg')"
-        >
-          <i class="material-icons">keyboard_arrow_right</i>
-        </div>
+    <!-- Producto 8 -->
+    <div class="producto" id="producto8" data-categoria="cuidado-mascotas" data-zona="zona-oeste">
+      <img src="img/peluqueracanina.jpg" alt="Peluqueria Canina" />
+      <h2>Peluquera Canina</h2>
+      <div class="description">
+        <p> 🐾PELUQUERIA CANINA RAME🐾
+          CORTE A DOMICILIO🏠
+        <br><br>
+        Zona: Oeste
+        </p>
       </div>
+    </div>
+
+    <!-- Producto 9 -->
+    <div class="producto" id="producto9" data-categoria="vehiculos" data-zona="zona-norte">
+      <img src="img/taller.png" alt="Taller chapa y pintura" />
+      <h2>Taller chapa y pintura</h2>
+      <div class="description">
+        <p> SE REALIZAN PRESUPUESTOS CON FOTOS
+          LUNES A VIERNES 9 a 18 hs
+          SABADOS 9 A 13:00 hs
+        <br><br>
+        Zona: Norte
+        </p>
+      </div>
+    </div>
+
+    <!-- Producto 10 -->
+    <div class="producto" id="producto10" data-categoria="vehiculos" data-zona="zona-sur">
+      <img src="img/pulido.png" alt="Pulido de autos" />
+      <h2>Tratamiento cerámico</h2>
+      <div class="description">
+        <p> Estos tratamientos eliminan rayas circulares (tipo tela de araña), manchas y demás detalles, dejándolo brillante como debería estar.
+        <br><br>
+        Zona: Sur
+        </p>
+      </div>
+    </div>
+
+    <!-- Producto 11 -->
+    <div class="producto" id="producto11" data-categoria="tecnologia" data-zona="zona-sur">
+      <img src="img/tecnico.png" alt="Servicio técnico" />
+      <h2>Servicio Tecnico De Consolas</h2>
+      <div class="description">
+        <p> Garantia 6 meses - No Incluye: Retiro y entrega
+        <br><br>
+        Zona: Sur
+        </p>
+      </div>
+    </div>
+
+    <!-- Producto 12 -->
+    <div class="producto" id="producto12" data-categoria="belleza" data-zona="zona-norte">
+      <img src="img/maquilladora.png" alt="Servicio técnico" />
+      <h2>Maquilladora A Domicilio Profesional Novias 15</h2>
+      <div class="description">
+        <p>Mi servicio se destaca por encontrar un estilo con el que la cliente se sienta identificada y por sobre todo cómoda. También tengo una experiencia de mas de 5 años. 
+        <br><br>
+        Zona: Norte
+        </p>
+      </div>
+    </div>
+
+    <!-- Producto 13 -->
+    <div class="producto" id="producto13" data-categoria="belleza" data-zona="caba">
+      <img src="img/maquillaprofe.png" alt="Maquillaje Profesional" />
+      <h2>Maquillaje Y Peinado Profesional A Domicilio</h2>
+      <div class="description">
+        <p> Mi nombre es Laura Sotelo, llevo mas de 8 años de experiencia como maquilladora y peinadora. Utilizo diferentes marcas, tanto nacionales como importadas, muchas de ellas son MAC, Dior, Lancome, Kryolan, etc.
+        <br><br>
+        Zona: CABA
+        </p>
+      </div>
+    </div>
+
+
+
     </section>
 
     <footer class="footer">
@@ -337,7 +303,9 @@
         .addEventListener("click", function () {
           window.location.href = "index.html";
         });
-      //
+      
+      
+      // Función cambiar imagen slide
 
       var slideIndex = 0;
 
@@ -363,6 +331,8 @@
       setInterval(function () {
         cambiarSlide(1);
       }, 8000);
+
+      // Función filtrar productos
 
       function filtrarProductos() {
         var termino = document
@@ -424,40 +394,19 @@
 
       // Función para filtrar productos por zona
       function filtrarPorZona(zona) {
-        var productos = document.querySelectorAll(".producto");
+  var productos = document.querySelectorAll(".producto");
 
-        productos.forEach(function (producto) {
-          var zonaProducto = producto.getAttribute("data-zona");
+  productos.forEach(function (producto) {
+    var zonaProducto = producto.getAttribute("data-zona");
 
-          if (zona === "todos" || zona === zonaProducto) {
-            producto.style.display = "block";
-          } else {
-            producto.style.display = "none";
-          }
-        });
-      }
+    if (zona === "todos" || zona === zonaProducto) {
+      producto.style.display = "block";
+    } else {
+      producto.style.display = "none";
+    }
+  });
+}
 
-      // Agrega la zona a cada producto en el HTML
-      document.getElementById("producto1").setAttribute("data-zona", "caba");
-      document
-        .getElementById("producto2")
-        .setAttribute("data-zona", "zona-norte");
-      document
-        .getElementById("producto3")
-        .setAttribute("data-zona", "zona-oeste");
-      document
-        .getElementById("producto4")
-        .setAttribute("data-zona", "zona-sur");
-      document.getElementById("producto5").setAttribute("data-zona", "caba");
-      document
-        .getElementById("producto6")
-        .setAttribute("data-zona", "zona-norte");
-      document
-        .getElementById("producto7")
-        .setAttribute("data-zona", "zona-oeste");
-      document
-        .getElementById("producto8")
-        .setAttribute("data-zona", "zona-sur");
     </script>
   </body>
 </html>
