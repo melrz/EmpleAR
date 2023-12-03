@@ -1,370 +1,339 @@
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        outline: none;
-        border: none;
-        list-style: none;
-    }
+/* Reset de estilos para todos los elementos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+}
 
-    body {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        background-color: rgb(202, 202, 219);
-        color: white;
-    }
+/* Estilos generales del cuerpo del sitio */
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(202, 202, 219);
+    color: white;
+}
 
-    .logo-title {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-    }
+/* Estilos del encabezado con logo y barra de navegación */
+.logo-title {
+    display: flex;
+    align-items: center;
+}
 
-    .logo {
-        width: 60px;
-        /* Cambia el tamaño del logo según tus preferencias */
-        margin-left: 60px;
-        /* Ajusta el margen derecho para separar el logo del título */
-    }
+.logo {
+    width: 60px;
+    margin-left: 60px;
+}
 
+.container-bar {
+    height: 70px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.container-bar h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    flex: none;
+}
 
-    .container-bar {
-        height: 70px;
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+/* Estilos de la barra de navegación */
+nav {
+    width: 100%;
+    background-color: #3b387a;
+    top: 0;
+    z-index: 10;
+    position: relative;
+}
 
-    .container-bar h2 {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        flex: none;
-    }
+nav .container-bar {
+    margin: 0;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
+.search-bar {
+    background-color: rgb(234, 234, 234);
+    border-radius: 32px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
 
+.search-bar input[type="search"] {
+    background: transparent;
+    width: 30vw;
+    margin-left: 20px;
+    font-size: 14px;
+    color: gray;
+    border: none;
+    outline: none;
+}
 
-    .icono-busqueda {
-        color: gray;
-    }
+nav .button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-    nav {
-        width: 100%;
-        background-color: #3b387a;
-        top: 0;
-        z-index: 10;
-        position: relative;
-    }
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 6px;
+    font-weight: bold;
+    border-radius: 32px;
+    cursor: pointer;
+    color: white;
+    background-color: #5956BA;
+    transition: all 300ms ease;
+}
 
-    nav .container-bar {
-        margin: 0;
-        max-width: 1200px;
-        /* Ajusta el ancho máximo según tu diseño */
-        width: 100%;
-        padding: 0 20px;
-        /* Añade relleno a los lados del contenedor */
-        box-sizing: border-box;
-    }
+.btn:hover {
+    opacity: 0.8;
+}
 
-    .search-bar {
-        background-color: rgb(234, 234, 234);
-        border-radius: 32px;
-        padding: 15px 20px;
-        display: flex;
-        align-items: center;
-    }
+/* Estilos del slider de imágenes */
+.slider {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: rgba(255, 255, 255, 0.43);
+    position: relative;
+    overflow: hidden;
+    width: 1200px;
+    max-width: 1300px;
+    height: 245px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .search-bar input[type="search"] {
-        background: transparent;
-        width: 30vw;
-        margin-left: 20px;
-        font-size: 14px;
-        color: gray;
-        border: none;
-        outline: none;
-    }
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+}
 
-    nav .button {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
 
-    .btn {
-        text-decoration: none;
-        display: inline-block;
-        padding: 15px 6px;
-        font-weight: bold;
-        border-radius: 32px;
-        cursor: pointer;
-        color: white;
-        background-color: #5956BA;
-        transition: all 300ms ease;
-    }
+.slide img {
+    border-radius: 6px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
 
-    .btn:hover {
-        opacity: 0.8;
-    }
+.arrow {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #5956BA;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
 
+.arrow-left {
+    left: 10px;
+    border-radius: 15px;
+}
 
+.arrow-right {
+    right: 10px;
+    border-radius: 15px;
+}
 
+/* Estilos del aside con lista de categorías y zonas */
+aside {
+    font-size: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 19px;
+    margin-left: 5px;
+    color: rgb(1, 1, 10);
+    background-color: rgba(255, 255, 255, 0.43);
+    border-radius: 5px;
+    float: left;
+    width: 190px;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
-    .slider {
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        background-color: rgba(255, 255, 255, 0.43);
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        max-width: 1300px;
-        height: 250px;
-        margin-top: 16px;
-        margin-bottom: 16px;
-        border-radius: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* Centra verticalmente */
-    }
-
-    .slides {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        align-items: center;
-        /* Centra verticalmente los elementos hijos */
-    }
-
-    .slide {
-        min-width: 100%;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-    }
-
-
-    .slide img {
-        border-radius: 6px;
-        width: auto;
-        height: auto;
-        object-fit: cover;
-    }
-
-
-    .arrow {
-        position: absolute;
-        top: 50%;
-        width: 30px;
-        height: 30px;
-        background-color: #333333;
-        color: #fff;
-        font-size: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        border: none;
-        outline: none;
-    }
-
-    .arrow-left {
-        left: 10px;
-        border-radius: 15px;
-    }
-
-    .arrow-right {
-        right: 10px;
-        border-radius: 15px;
-    }
-
-
-
-    aside {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        margin-top: 19px;
-        margin-left: 6px;
-        color: rgb(1, 1, 10);
-        background-color: rgba(255, 255, 255, 0.43);
-        border-radius: 5px;
-        float: left;
-        /* Hace que el aside flote a la izquierda */
-        width: 200px;
-        /* Ajusta el ancho del aside según tus necesidades */
-        padding: 20px;
-        /* Añade relleno para mayor legibilidad */
-        box-sizing: border-box;
-        /* Incluye el relleno en el ancho total */
-    }
-
-    /* Estilos para la lista de categorías y zonas */
-    #filtroCategorias {
-        list-style: none;
-        padding: 0;
-    }
-
-    #filtroCategorias li {
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
-
-    #bton-categoria {
-        border-radius: 4px;
-        display: block;
-        margin-top: 10px;
-        padding: 10px;
-    }
-
-
-    /* Estilos adicionales para las zonas */
-    #filtroCategorias h2 {
-        margin-top: 20px;
-        /* Espacio adicional entre categoría y zona */
-        font-size: 1.2em;
-        /* Ajusta el tamaño del título de categoría/zona */
-    }
+aside h2{
+    margin-bottom: 5px
+}
 
 
 
+#filtroCategorias li {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
 
-    .boxes {
-        color: rgb(0, 0, 0);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 20px;
-        margin-bottom: 100px;
-        position: relative;
-    }
+#filtroZonas li {
+    cursor: pointer;
+    margin-bottom: 10px;
+
+  }
 
 
-    .producto {
-        width: 500px;
-        height: 400px;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.43);
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        text-align: center;
-        width: calc(25% - 20px);
-        /* Ajusta el ancho de cada producto */
-        margin-right: 20px;
-        /* Espacio entre productos */
-        margin-bottom: 20px;
-        /* Espacio entre filas de productos */
-        position: relative;
-    }
+#bton-categoria {
+    border-radius: 4px;
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+}
 
-    .boxes img {
-        border-radius: 3px;
-        margin-top: 10px;
-        overflow: hidden;
-        width: 255px;
-        height: 250px;
-        border: 1px solid #02020224;
-        /* Borde alrededor de la imagen */
-    }
 
-    .producto .flecha-izquierda,
-    .producto .flecha-derecha {
-        font-size: 32px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-        color: white;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 1px;
-        color: #3b387a;
-        background-color: transparent;
-        font-weight: 15%;
-    }
+#filtroCategorias h2 {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
 
-    .producto .flecha-izquierda {
-        left: 1px;
-    }
+#bton-categoria {
+    background-color: #5956BA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
 
-    .producto .flecha-derecha {
-        right: 1px;
-        /* Ajusta el margen derecho aquí */
-    }
+  #bton-categoria:hover {
+    background-color: #4b48a6;
+  }
 
-    .description {
-        padding: 10px;
-        max-height: 100px;
-        /* Limita la altura del texto */
-        overflow: hidden;
-        /* Oculta el desbordamiento de texto */
-    }
+/* Estilos de la sección de productos */
+.boxes {
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 10px;
+    margin-bottom: 100px;
+    position: relative;
+}
 
-    .description h2 {
-        font-size: 18px;
-        margin: 10px 0;
-    }
+.producto {
+    height: 470px; /* Cambia la altura a automático para adaptarse al contenido */
+    width: 270px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.43);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    margin-right: 11px;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
 
-    .description p {
-        font-size: 14px;
-        color: #000000;
-        margin: 10px 0;
-    }
+.boxes img {
+    height: 260px;
+    width: 250px;
+    border-radius: 5px;
+    margin-top: 0px;
+    overflow: hidden;
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+.producto h2{
+    font-size:20px;
+}
 
-    .footer {
-        background-color: #3b387a;
-        padding: 35px 0;
-        width: 100%;
-    }
 
-    .footer-row {
-        display: flex;
-        flex-wrap: wrap;
-    }
+.description {
+    padding: 10px;
+    max-height: 100px
+}
 
-    .footer-links {
-        width: 25%;
-        padding: 0 15px;
-    }
+.description p {
+    font-size: 14px;
+    color: #000000;
+    margin: 0px 0;
+}
 
-    .footer-links h4 {
-        font-size: 20px;
-        color: white;
-        margin-bottom: 25px;
-        font-weight: 500;
-        border-bottom: 2px solid #5956BA;
-        padding-bottom: 10px;
-        display: inline-block;
-    }
 
-    .footer-links ul li a {
-        font-size: 18px;
-        text-decoration: none;
-        color: #bbbbbb;
-        display: block;
-        margin-bottom: 15px;
-        transition: all 0.3s ease;
-    }
+/* Estilos del pie de página */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    .footer-links ul li a:hover {
-        color: white;
-        padding-left: 6px;
-    }
+.footer {
+    background-color: #3b387a;
+    padding: 35px 0;
+    width: 100%;
+}
 
-    .social-links a {
-        display: inline-block;
-        min-height: 40px;
-        width: 40px;
-        background-color: rgba(255, 255, 255, 0.2);
-        margin: 0 10px 10px 0;
-        text-align: center;
-        line-height: 40px;
-        border-radius: 50%;
-        color: white;
-        transition: all .5s ease;
-    }
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    .social-links a:hover {
-        background-color: #5956BA;
-    }
+.footer-links {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #5956BA;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #bbbbbb;
+    display: block;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: white;
+    padding-left: 6px;
+}
+
+.social-links a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all .5s ease;
+}
+
+.social-links a:hover {
+    background-color: #5956BA;
+}
