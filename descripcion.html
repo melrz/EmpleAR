@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        background-color: rgb(202, 202, 219);
+        color: white;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Estilos del encabezado con logo y barra de navegación */
+      .logo-title {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        width: 60px;
+        margin-left: 60px;
+      }
+
+      .container-bar {
+        height: 70px;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .container-bar h2 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        flex: none;
+      }
+
+      /* Estilos de la barra de navegación */
+      nav {
+        width: 100%;
+        background-color: #3b387a;
+        top: 0;
+        z-index: 10;
+        position: relative;
+      }
+
+      nav .container-bar {
+        margin: 0;
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+
+      .search-bar {
+        background-color: rgb(234, 234, 234);
+        border-radius: 32px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .search-bar i, .search-bar .clear {
+        color: rgb(87, 87, 87);
+        }
+
+      .search-bar input[type="search"] {
+        background: transparent;
+        width: 30vw;
+        margin-left: 20px;
+        font-size: 14px;
+        color: gray;
+        border: none;
+        outline: none;
+      }
+
+
+      nav .button {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .btn {
+        
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-decoration: none;
+        display: inline-block;
+        padding: 15px 6px;
+        font-weight:600;
+        border-radius: 32px;
+        cursor: pointer;
+        color: white;
+        background-color: #5956ba;
+        transition: all 300ms ease;
+      }
+
+      .btn:hover {
+        opacity: 0.8;
+      }
+
+      .contacto-btn:hover{
+        opacity: 0.8;
+      }
+
+      .container {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        box-shadow: rgb(6, 7, 7) 0px 20px 30px -10px;        background-color: white;
+        color: black;
+        border-radius: 5px;
+        width: 95%;
+        height: auto;
+        margin: 20px auto;
+        overflow: hidden;
+      }
+
+      .service-box {
+        float: left;
+        width: 40%;
+      }
+
+      .service-box img {
+  margin-top: 3px;
+  margin-left: 3px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  border-radius: 5px;
+  width: 100%;
+  height: 550px;
+  transition: opacity 0.5s ease; /* Agregado: transición de opacidad */
+}
+
+      .descripcion {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  float: left;
+  width: 57%;
+  padding-left: 20px;
+}
+
+.descripcion .rating-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Ajusta el margen inferior según necesites */
+}
+
+.descripcion .rating {
+  font-size: 24px;
+  color: #f39c12;
+  margin-right: 10px; /* Ajusta el margen derecho según necesites */
+}
+
+.descripcion .zona-text {
+  font-size: 15px; /* Ajusta el tamaño del texto según necesites */
+  color: #333; 
+  margin-left: 400px;/* Cambia el color si es necesario */
+  /* Otros estilos que desees agregar */
+}
+
+.descripcion h2 {
+  margin-top: 15px; /* Ajusta el margen superior del h2 según tus preferencias */
+  margin-bottom: 0;
+}
+
+.descripcion .rating {
+  margin-bottom: 10px; /* Ajusta el margen inferior del rating según tus preferencias */
+  /* Puedes ajustar más propiedades si es necesario */
+}
+
+      .rating {
+        margin-top: 0;
+        font-size: 24px;
+        color: #f39c12;
+      }
+
+      .preguntas-box {
+    border: 1px rgb(212, 207, 207) solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: rgb(234, 234, 234);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    min-height: 150px; /* Ajusta este valor según sea necesario */
+}
+
+.preguntas-box h3 {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+/* Estilos para el textarea dentro de .preguntas-box */
+.preguntas-box textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Evitar que el usuario redimensione el textarea */
+}
+
+/* Estilos para el botón dentro de .preguntas-box */
+.preguntas-box button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #5956ba;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contacto-btn {
+    text-shadow: 2px 1px 2px rgba(0,0,0,0.6);
+    margin-top: 20px; /* Ajusta según sea necesario */
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #5956ba;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+      .arrow {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        font-weight: bold;
+        border-radius:1px;
+        cursor: pointer;
+        color: #3b387a;
+        z-index: 1;
+      }
+
+      .arrow-left {
+        margin-right: 1px;
+      }
+
+      .arrow-right {
+        margin-left: 490px;
+      }
+
+      button{
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container-bar">
+        <div class="logo-title">
+          <img src="img/logo.svg" alt="Logo EmpleAR" class="logo" />
+          <h2 id="titulo">EmpleAR</h2>
+        </div>
+        <div class="search-bar">
+          <i class="fas fa-search icono-busqueda"></i>
+          <input type="search" placeholder="Buscar" />
+          <i class="fas fa-times clear" style="display: none;"></i>
+        </div>
+        <div id="no-resultados" style="display: none">No hay resultados</div>
+        <div class="button">
+          <a href="login.html" class="btn">Iniciar sesión</a>
+          <a href="registro.html" class="btn">Registrarse</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="service-box" id="box1">
+        <div class="arrow arrow-left" onclick="prevImage('box1')">&#9664;</div>
+        <img src="img/maqui1.png" alt="Maquillaje" />
+        <div class="arrow arrow-right" onclick="nextImage('box1')">&#9654;</div>
+      </div>
+      <div class="descripcion">
+        <h2>Maquilladora Maquillaje Profesional A Domicilio</h2>
+        <div class="rating-container">
+            <div class="rating">★★★★☆</div>
+            <span class="zona-text">Zona Norte</span>
+          </div>
+
+        <p>
+   CAMI DALLAS MKP - MAQUILLADORA PROFESIONAL A DOMICILIO O EN MI ESPACIO (Zuviria y Thompson)
+            
+            -Mi servicio se destaca por encontrar un estilo con el que la cliente se sienta identificada y por sobre todo cómoda. También tengo una experiencia de mas de 5 años. Los productos de mi valija maquilladora son de alta gama y primera calidad, como por ejemplo: Benefit, Anastasia Beberly hills, Nathacha nina, Too faced, Kat Von D entre otros.
+            La preparación de la piel para el cuidado de la cliente es fundamental, ya que no solo la protegerá esta sino que también hará que el maquillaje pueda durar hasta 24hs.
+
+        </p>
+        <div class="preguntas-box">
+            <h3>Preguntas</h3>
+            <textarea id="pregunta" rows="4" cols="50" placeholder="Escribí una pregunta acá..."></textarea>
+            <button onclick="enviarPregunta()">Enviar</button>
+          </div>
+        
+          <div class="contacto-btn">Contacto</div>
+
+          
+    </div>
+
+    <script>
+      function setupCarousel(boxId, images) {
+        const box = document.getElementById(boxId);
+        const carouselImage = box.querySelector("img");
+        let currentImageIndex = 0;
+
+        function nextImage() {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          updateImage();
+        }
+
+        function prevImage() {
+          currentImageIndex =
+            (currentImageIndex - 1 + images.length) % images.length;
+          updateImage();
+        }
+
+        function updateImage() {
+          const imageUrl = images[currentImageIndex];
+          carouselImage.style.opacity = "0"; /* Cambié a opacidad 0 */
+          setTimeout(() => {
+            carouselImage.src = imageUrl;
+            carouselImage.style.opacity = "1"; /* Cambié a opacidad 1 */
+          }, 500);
+        }
+
+        box.querySelector(".arrow-left").addEventListener("click", prevImage);
+        box.querySelector(".arrow-right").addEventListener("click", nextImage);
+      }
+
+      // Configurar el carrusel para la primera caja
+      setupCarousel("box1", ["img/maqui2.png", "img/maqui3.png"]);
+    </script>
+  </body>
+</html>
