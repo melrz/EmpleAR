@@ -5,10 +5,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EmpleAR</title>
 
-    <link rel="stylesheet" href="css/publicar.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   </head>
+  <style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+}
+
+/* Estilos generales del cuerpo del sitio */
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(202, 202, 219);
+    color: white;
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto del contenedor */
+  }
+
+  .logo-title h2 {
+    cursor: pointer;
+  }
+
+/* Estilos del encabezado con logo y barra de navegación */
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    margin-left: 60px;
+}
+
+.container-bar {
+    height: 70px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-bar h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    flex: none;
+}
+
+/* Estilos de la barra de navegación */
+nav {
+    width: 100%;
+    background-color: #3b387a;
+    top: 0;
+    z-index: 10;
+    position: relative;
+}
+
+nav .container-bar {
+    margin: 0;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.search-bar {
+    background-color: rgb(234, 234, 234);
+    border-radius: 32px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="search"] {
+    background: transparent;
+    width: 30vw;
+    margin-left: 20px;
+    font-size: 14px;
+    color: gray;
+    border: none;
+    outline: none;
+}
+
+.search-bar i, .search-bar .clear {
+    color: rgb(87, 87, 87);
+    }
+
+nav .button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 6px;
+    font-weight: bold;
+    border-radius: 32px;
+    cursor: pointer;
+    color: white;
+    background-color: #5956BA;
+    transition: all 300ms ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Estilos de la sección de publicar servicio */
+.publicar-servicio {
+  font-weight: bold;
+    color: black;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.publicar-servicio textarea {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+.publicar-servicio h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #5956BA;
+}
+
+.publicar-servicio form {
+    display: flex;
+    flex-direction: column;
+}
+
+.publicar-servicio label {
+    margin-top: 10px;
+    font-size: 16px;
+    color: black; /* Cambiado a color negro para el texto de los labels */
+}
+
+.publicar-servicio input,
+.publicar-servicio textarea,
+.publicar-servicio select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.publicar-servicio button {
+    padding: 12px 20px;
+    background-color: #5956BA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.publicar-servicio button:hover {
+    background-color: #4b48a6;
+}
+
+footer {
+        
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        bottom: 0;
+        background-color: #3b387a;
+      }
+
+
+  </style>
 
   <body>
     <nav>
@@ -24,144 +209,48 @@
         <div id="no-resultados" style="display: none">No hay resultados</div>
         <div class="button">
           <a href="login.html" class="btn">Iniciar sesión</a>
+          <a href="publicar.html" class="btn">Publicar Servicio</a>
         </div>
       </div>
     </nav>
 
-        <section class="publicar-servicio">
-          <h2>Publicar Servicio</h2>
-          <form action="#" method="post" enctype="multipart/form-data">
-            <label for="titulo">Título del Servicio:</label>
-            <input type="text" id="titulo" name="titulo" required />
-    
-            <label for="descripcion">Descripción del Servicio:</label>
-            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-    
-            <label for="foto">Subir Fotos:</label>
-            <input type="file" id="foto" name="foto" accept="image/*" multiple />
-    
-            <label for="zona">Seleccionar Zona:</label>
-            <select id="zona" name="zona" required>
-              <option value="caba">CABA</option>
-              <option value="zona-norte">Zona Norte</option>
-              <option value="zona-oeste">Zona Oeste</option>
-              <option value="zona-sur">Zona Sur</option>
-            </select>
-    
-            <button type="submit">Publicar Servicio</button>
-          </form>
-        </section>
+    <section class="publicar-servicio" id="publicar-servicio">
+      <h2>Publicar Servicio</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+          <label for="titulo">Título del Servicio:</label>
+          <input type="text" id="titulo" name="titulo" placeholder="Ingrese un título" required />
+  
+          <label for="descripcion">Descripción del Servicio:</label>
+          <textarea id="descripcion" name="descripcion" rows="4" placeholder="Ingrese una descripción del servicio" required></textarea>
+  
+          <label for="foto">Subir Fotos:</label>
+          <input type="file" id="foto" name="foto" accept="image/*" multiple />
 
-    <script>
-      // Redirección a la página principal
-      document
+          <label for="contacto">Contacto:</label>
+          <input type="url" id="contacto" name="contacto" placeholder="Ingrese el enlace de contacto" required />
+  
+          <label for="zona">Seleccionar Zona:</label>
+          <select id="zona" name="zona" required>
+            <option value="caba">CABA</option>
+            <option value="zona-norte">Zona Norte</option>
+            <option value="zona-oeste">Zona Oeste</option>
+            <option value="zona-sur">Zona Sur</option>
+          </select>
+  
+          <button type="submit">Publicar Servicio</button>
+        </form>
+      </section>
+
+      <footer>
+        <p>Todos los derechos reservados &copy; 2023</p>
+      </footer>
+
+      <script>
+        document
         .querySelector(".logo-title h2")
         .addEventListener("click", function () {
           window.location.href = "index.html";
         });
-      
-      
-      // Función cambiar imagen slide
-
-      var slideIndex = 0;
-
-      function cambiarSlide(n) {
-        mostrarSlides((slideIndex += n));
-      }
-
-      function mostrarSlides(n) {
-        var slides = document.querySelectorAll(".slide");
-
-        if (n >= slides.length) {
-          slideIndex = 0;
-        }
-
-        if (n < 0) {
-          slideIndex = slides.length - 1;
-        }
-
-        document.querySelector(".slides").style.transform =
-          "translateX(" + -slideIndex * 100 + "%)";
-      }
-
-      setInterval(function () {
-        cambiarSlide(1);
-      }, 8000);
-
-      // Función filtrar productos
-
-      function filtrarProductos() {
-        var termino = document
-          .querySelector('.search-bar input[type="search"]')
-          .value.toLowerCase();
-        var productos = document.querySelectorAll(".producto");
-        var noResultados = document.getElementById("no-resultados");
-
-        var resultadosEncontrados = false;
-
-        productos.forEach(function (producto) {
-          var nombre = producto.querySelector("h2").innerText.toLowerCase();
-          var descripcion = producto.querySelector("p").innerText.toLowerCase();
-
-          if (nombre.includes(termino) || descripcion.includes(termino)) {
-            producto.style.display = "block";
-            resultadosEncontrados = true;
-          } else {
-            producto.style.display = "none";
-          }
-        });
-
-        // Mostrar u ocultar el mensaje de no resultados
-        if (resultadosEncontrados) {
-          noResultados.style.display = "none";
-        } else {
-          noResultados.style.display = "block";
-        }
-      }
-
-      // Agrega un evento de escucha para el input de búsqueda
-      document
-        .querySelector('.search-bar input[type="search"]')
-        .addEventListener("input", filtrarProductos);
-
-      // Función para filtrar productos por categoría
-      function filtrarPorCategoria(categoria) {
-        var productos = document.querySelectorAll(".producto");
-
-        productos.forEach(function (producto) {
-          var categoriaProducto = producto.getAttribute("data-categoria");
-
-          if (categoria === "todos" || categoria === categoriaProducto) {
-            producto.style.display = "block";
-          } else {
-            producto.style.display = "none";
-          }
-        });
-      }
-
-      // Función para limpiar el filtro y mostrar todos los productos
-      function limpiarFiltro() {
-        var productos = document.querySelectorAll(".producto");
-
-        productos.forEach(function (producto) {
-          producto.style.display = "block";
-        });
-      }
-
-      // Función para filtrar productos por zona
-      function filtrarPorZona(zona) {
-  var productos = document.querySelectorAll(".producto");
-
-  productos.forEach(function (producto) {
-    var zonaProducto = producto.getAttribute("data-zona");
-
-    if (zona === "todos" || zona === zonaProducto) {
-      producto.style.display = "block";
-    } else {
-      producto.style.display = "none";
-    }
-  });
-}
-//
-    </script>
+      </script>
+    </body>
 </html>

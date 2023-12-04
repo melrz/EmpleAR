@@ -257,8 +257,7 @@ nav .button {
   background-attachment: initial;
   background-origin: initial;
   background-clip: initial;
-  background-color: rgb(255, 235, 234);
-  color: rgb(244, 152, 146);
+  color: rgb(0, 0, 0);
 }
 
 .responsive-container-block.Container {
