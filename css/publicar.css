@@ -1,115 +1,115 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
 }
 
 /* Estilos generales del cuerpo del sitio */
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: rgb(202, 202, 219);
-    color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgb(202, 202, 219);
+  color: white;
 }
 
 a {
-    text-decoration: none; /* Elimina el subrayado */
-    color: inherit; /* Hereda el color del texto del contenedor */
-  }
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Hereda el color del texto del contenedor */
+}
 
-  .logo-title h2 {
-    cursor: pointer;
-  }
+.logo-title h2 {
+  cursor: pointer;
+}
 
 /* Estilos del encabezado con logo y barra de navegación */
 .logo-title {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-    width: 60px;
-    margin-left: 60px;
+  width: 60px;
+  margin-left: 60px;
 }
 
 .container-bar {
-    height: 70px;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  height: 70px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container-bar h2 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    flex: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  flex: none;
 }
 
 /* Estilos de la barra de navegación */
 nav {
-    width: 100%;
-    background-color: #3b387a;
-    top: 0;
-    z-index: 10;
-    position: relative;
+  width: 100%;
+  background-color: #3b387a;
+  top: 0;
+  z-index: 10;
+  position: relative;
 }
 
 nav .container-bar {
-    margin: 0;
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
+  margin: 0;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .search-bar {
-    background-color: rgb(234, 234, 234);
-    border-radius: 32px;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
+  background-color: rgb(234, 234, 234);
+  border-radius: 32px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
 }
 
 .search-bar input[type="search"] {
-    background: transparent;
-    width: 30vw;
-    margin-left: 20px;
-    font-size: 14px;
-    color: gray;
-    border: none;
-    outline: none;
+  background: transparent;
+  width: 30vw;
+  margin-left: 20px;
+  font-size: 14px;
+  color: gray;
+  border: none;
+  outline: none;
 }
 
 .search-bar i, .search-bar .clear {
-    color: rgb(87, 87, 87);
-    }
+  color: rgb(87, 87, 87);
+  }
 
 nav .button {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .btn {
-    text-decoration: none;
-    display: inline-block;
-    padding: 15px 6px;
-    font-weight: bold;
-    border-radius: 32px;
-    cursor: pointer;
-    color: white;
-    background-color: #5956BA;
-    transition: all 300ms ease;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 6px;
+  font-weight: bold;
+  border-radius: 32px;
+  cursor: pointer;
+  color: white;
+  background-color: #5956BA;
+  transition: all 300ms ease;
 }
 
 .btn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
   
-  main {
+  section {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;

@@ -24,12 +24,10 @@
         <div id="no-resultados" style="display: none">No hay resultados</div>
         <div class="button">
           <a href="login.html" class="btn">Iniciar sesión</a>
-          <a href="publicar.html" class="btn">Publicar servicio</a>
         </div>
       </div>
     </nav>
 
-    <main>
         <section class="publicar-servicio">
           <h2>Publicar Servicio</h2>
           <form action="#" method="post" enctype="multipart/form-data">
@@ -53,5 +51,117 @@
             <button type="submit">Publicar Servicio</button>
           </form>
         </section>
-    </main>
+
+    <script>
+      // Redirección a la página principal
+      document
+        .querySelector(".logo-title h2")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+      
+      
+      // Función cambiar imagen slide
+
+      var slideIndex = 0;
+
+      function cambiarSlide(n) {
+        mostrarSlides((slideIndex += n));
+      }
+
+      function mostrarSlides(n) {
+        var slides = document.querySelectorAll(".slide");
+
+        if (n >= slides.length) {
+          slideIndex = 0;
+        }
+
+        if (n < 0) {
+          slideIndex = slides.length - 1;
+        }
+
+        document.querySelector(".slides").style.transform =
+          "translateX(" + -slideIndex * 100 + "%)";
+      }
+
+      setInterval(function () {
+        cambiarSlide(1);
+      }, 8000);
+
+      // Función filtrar productos
+
+      function filtrarProductos() {
+        var termino = document
+          .querySelector('.search-bar input[type="search"]')
+          .value.toLowerCase();
+        var productos = document.querySelectorAll(".producto");
+        var noResultados = document.getElementById("no-resultados");
+
+        var resultadosEncontrados = false;
+
+        productos.forEach(function (producto) {
+          var nombre = producto.querySelector("h2").innerText.toLowerCase();
+          var descripcion = producto.querySelector("p").innerText.toLowerCase();
+
+          if (nombre.includes(termino) || descripcion.includes(termino)) {
+            producto.style.display = "block";
+            resultadosEncontrados = true;
+          } else {
+            producto.style.display = "none";
+          }
+        });
+
+        // Mostrar u ocultar el mensaje de no resultados
+        if (resultadosEncontrados) {
+          noResultados.style.display = "none";
+        } else {
+          noResultados.style.display = "block";
+        }
+      }
+
+      // Agrega un evento de escucha para el input de búsqueda
+      document
+        .querySelector('.search-bar input[type="search"]')
+        .addEventListener("input", filtrarProductos);
+
+      // Función para filtrar productos por categoría
+      function filtrarPorCategoria(categoria) {
+        var productos = document.querySelectorAll(".producto");
+
+        productos.forEach(function (producto) {
+          var categoriaProducto = producto.getAttribute("data-categoria");
+
+          if (categoria === "todos" || categoria === categoriaProducto) {
+            producto.style.display = "block";
+          } else {
+            producto.style.display = "none";
+          }
+        });
+      }
+
+      // Función para limpiar el filtro y mostrar todos los productos
+      function limpiarFiltro() {
+        var productos = document.querySelectorAll(".producto");
+
+        productos.forEach(function (producto) {
+          producto.style.display = "block";
+        });
+      }
+
+      // Función para filtrar productos por zona
+      function filtrarPorZona(zona) {
+  var productos = document.querySelectorAll(".producto");
+
+  productos.forEach(function (producto) {
+    var zonaProducto = producto.getAttribute("data-zona");
+
+    if (zona === "todos" || zona === zonaProducto) {
+      producto.style.display = "block";
+    } else {
+      producto.style.display = "none";
+    }
+  });
+}
+//
+    </script>
 </html>
