@@ -16,6 +16,10 @@
         padding: 0;
       }
 
+      .logo-title h2 {
+        cursor: pointer;
+    }
+
       /* Estilos del encabezado con logo y barra de navegación */
       .logo-title {
         display: flex;
@@ -23,6 +27,7 @@
       }
 
       .logo {
+        cursor: pointer;
         width: 60px;
         margin-left: 60px;
       }
@@ -111,7 +116,8 @@
 
       .container {
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        box-shadow: rgb(6, 7, 7) 0px 20px 30px -10px;        background-color: white;
+        box-shadow: rgb(6, 7, 7) 0px 20px 30px -10px;        
+        background-color: white;
         color: black;
         border-radius: 5px;
         width: 95%;
@@ -252,6 +258,52 @@
       button{
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
       }
+
+      .opiniones-container {
+        margin-top: 20px;
+        width: 95%; /* Ajusta el ancho según tus necesidades */
+        margin: 20px auto; /* Centra el contenedor en el medio */
+      }
+
+      .opiniones-container h3 {
+        font-size: 20px;
+        color: #5956ba;
+      }
+
+      .opinion-container {
+        box-shadow: rgb(6, 7, 7) 0px 20px 30px -10px;  
+        background-color: #f0f0f0;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+      }
+
+      .opinion .rating {
+        font-size: 24px;
+        color: #f39c12;
+        margin-bottom: 10px;
+      }
+
+      .opinion p {
+        font-size: 16px;
+        color: #333;
+      }
+
+      .opinion p strong {
+        color: #5956ba;
+      }
+
+      /* Estilos para el footer */
+      footer {
+        
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        bottom: 0;
+        background-color: #3b387a;
+      }
+
     </style>
   </head>
   <body>
@@ -287,12 +339,9 @@
             <span class="zona-text">Zona Norte</span>
           </div>
 
-        <p>
-   CAMI DALLAS MKP - MAQUILLADORA PROFESIONAL A DOMICILIO O EN MI ESPACIO (Zuviria y Thompson)
-            
+        <p>CAMI DALLAS MKP - MAQUILLADORA PROFESIONAL A DOMICILIO O EN MI ESPACIO (Zuviria y Thompson)
             -Mi servicio se destaca por encontrar un estilo con el que la cliente se sienta identificada y por sobre todo cómoda. También tengo una experiencia de mas de 5 años. Los productos de mi valija maquilladora son de alta gama y primera calidad, como por ejemplo: Benefit, Anastasia Beberly hills, Nathacha nina, Too faced, Kat Von D entre otros.
             La preparación de la piel para el cuidado de la cliente es fundamental, ya que no solo la protegerá esta sino que también hará que el maquillaje pueda durar hasta 24hs.
-
         </p>
         <div class="preguntas-box">
             <h3>Preguntas</h3>
@@ -300,10 +349,36 @@
             <button onclick="enviarPregunta()">Enviar</button>
           </div>
         
-          <div class="contacto-btn">Contacto</div>
-
-          
+          <div class="contacto-btn">Contacto</div>      
     </div>
+    </div>
+
+    <div class="opiniones-container">
+        <h3>Opiniones</h3>
+        <div class="opinion-container">
+          <div class="opinion">
+            <div class="rating">★★★★★</div>
+            <p><strong>Marcela L.</strong> Excelente servicio, estoy muy satisfecha con el maquillaje!!</p>
+          </div>
+        </div>
+        <div class="opinion-container">
+          <div class="opinion">
+            <div class="rating">★★★★☆</div>
+            <p><strong>Josefina P.</strong> El maquillaje fue bueno, pero tuve algunos problemas de comunicación.</p>
+          </div>
+        </div>
+        <div class="opinion-container">
+            <div class="opinion">
+              <div class="rating">★★★★★</div>
+              <p><strong>Martina G.</strong> Me encanta su trabajo. Recurro a ella para cada acontecimiento importante.</p>
+            </div>
+          </div>
+    </div>
+      
+      
+    <footer>
+        <p>Todos los derechos reservados &copy; 2023</p>
+      </footer>
 
     <script>
       function setupCarousel(boxId, images) {
@@ -337,6 +412,12 @@
 
       // Configurar el carrusel para la primera caja
       setupCarousel("box1", ["img/maqui2.png", "img/maqui3.png"]);
+
+      document
+        .querySelector(".logo-title h2")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
     </script>
   </body>
 </html>

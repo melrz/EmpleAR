@@ -124,6 +124,10 @@ a {
   margin-top: 1rem;
 }
 
+main{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .form-main {
   height: auto;
   min-height: 80vh;

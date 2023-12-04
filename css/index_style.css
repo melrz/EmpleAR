@@ -15,6 +15,15 @@ body {
     color: white;
 }
 
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto del contenedor */
+  }
+
+  .logo-title h2 {
+    cursor: pointer;
+  }
+
 /* Estilos del encabezado con logo y barra de navegación */
 .logo-title {
     display: flex;
@@ -74,6 +83,10 @@ nav .container-bar {
     border: none;
     outline: none;
 }
+
+.search-bar i, .search-bar .clear {
+    color: rgb(87, 87, 87);
+    }
 
 nav .button {
     display: flex;
@@ -231,7 +244,7 @@ aside h2{
     flex-wrap: wrap;
     align-items: flex-start;
     padding: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 20px; /* Ajusta el margen inferior según tus necesidades */
     position: relative;
 }
 
@@ -275,16 +288,18 @@ aside h2{
 }
 
 
-/* Estilos del pie de página */
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+
 .footer {
     background-color: #3b387a;
     padding: 35px 0;
-    width: 100%;
+    margin-top: auto;
+    position: relative; 
+    bottom: 0;
 }
 
 .footer-row {
@@ -300,7 +315,7 @@ aside h2{
 .footer-links h4 {
     font-size: 20px;
     color: white;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-weight: 500;
     border-bottom: 2px solid #5956BA;
     padding-bottom: 10px;
@@ -337,3 +352,5 @@ aside h2{
 .social-links a:hover {
     background-color: #5956BA;
 }
+
+
